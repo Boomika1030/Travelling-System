@@ -68,9 +68,9 @@ def init_db():
         cursor.execute('SELECT COUNT(*) FROM places')
         if cursor.fetchone()[0] == 0:
             places = [
-                ('Paris, France', 'Experience the city of love, Eiffel Tower, and fine dining.', 1200.00, 'https://images.unsplash.com/photo-1502602881224-2b992f153ce1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
-                ('Kyoto, Japan', 'Discover historical temples, gardens, and traditional wooden houses.', 1500.00, 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
-                ('Rome, Italy', 'Explore ancient ruins, art, and vibrant street life.', 1100.00, 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')
+                ('Paris, France', 'Experience the city of love, Eiffel Tower, and fine dining.', 1200.00, '/static/images/paris.jpg'),
+                ('Kyoto, Japan', 'Discover historical temples, gardens, and traditional wooden houses.', 1500.00, '/static/images/kyoto.jpg'),
+                ('Rome, Italy', 'Explore ancient ruins, art, and vibrant street life.', 1100.00, '/static/images/rome.jpg')
             ]
             cursor.executemany('INSERT INTO places (name, description, price, image_url) VALUES (?, ?, ?, ?)', places)
 
