@@ -1,9 +1,11 @@
-FROM python:3.10
+FROM node:18
 
 WORKDIR /app
 
 COPY . .
 
+RUN npm install
+
 EXPOSE 5000
 
-CMD ["python","app.py"]
+CMD ["npm","run","dev"]
